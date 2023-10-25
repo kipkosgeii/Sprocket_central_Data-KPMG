@@ -32,16 +32,16 @@ if col3.button("Show Address Data"):
 # visualize CustomerDemograpgic
 # CustomerAddress_df.head(5)
 
-st.subheader("Distribution of a Selected Customer Dmograph")
+st.subheader("Distribution of a Selected Customer Demograph")
 selected_feature = st.selectbox("Select a feature to display its distribution:", CustomerDemographic_df.columns[:-1])
 
-hist_plot = px.histogram(CustomerDemographic_df, x=selected_feature, color="tenure", nbins=30, marginal="box", hover_data=CustomerDemographic_df.columns)
+hist_plot = px.histogram(CustomerDemographic_df, x=selected_feature, color="Health", nbins=30, marginal="box", hover_data=CustomerDemographic_df.columns)
 st.plotly_chart(hist_plot)
 
 st.subheader("Distribution of a Selected Customer Transaction")
 selected_feature = st.selectbox("Select a feature to display its distribution:", Transactions_df.columns[:-1])
 
-hist_plot = px.histogram(Transactions_df, x=selected_feature, color="brand", nbins=30, marginal="box", hover_data=Transactions_df.columns)
+hist_plot = px.histogram(Transactions_df, x=selected_feature, color="Solex", nbins=30, marginal="box", hover_data=Transactions_df.columns)
 st.plotly_chart(hist_plot)
 
 st.subheader("Distribution of a Selected Customer Address")
